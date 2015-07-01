@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Countdown Ramadhan!</title>
+
+    <meta name="description" content="Countdown Ramadhan!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+		
+		html, body {
+			width: 80%;
+			height: 100%;
+		}
+
+		html {
+			display: table;
+			margin: auto;
+		}
+
+		body {
+    	display: table-cell;
+    	vertical-align: middle;
+    	}
+
+    	p {
+		margin-left: 60%;}
+
+    	.timer {
+		padding: 30px;
+		width: 500px; 
+		margin: 0 auto;
+	}
+
+		.buttons {
+		margin: 20px;
+		padding: 20px;
+	}
+
+	</style>
+
+  </head>	
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h1>
+									Countdown Ramadhan! <small>Ver. 1.0</small>
+								</h1>
+							</div>
+						</div>
+					</div>
+
+					<div class="timer">
+						<div class="row" id="parent_timer">
+							<div class="col-md-12" id="timer_countdown">
+							</div>
+						</div>
+					</div>
+					
+					<div class="buttons">
+						<div class="row">
+						<div class="col-md-4">
+							 
+							<button type="button" class="btn btn-block btn-lg btn-success" disabled="disabled">
+								Berbuka!
+							</button>
+						</div>
+						<div class="col-md-4">
+							 
+							<button type="button" class="btn btn-lg btn-block btn-warning" disabled="disabled">
+								Imsak!
+							</button>
+						</div>
+						<div class="col-md-4">
+							 
+							<button id="btnIdulFItri" type="button" class="btn btn-danger btn-block btn-lg active">
+								Idul Fitri!
+							</button>
+						</div>
+					</div>
+					</div>
+					
+					<div class="quote">
+					<div class="row">
+						<div class="col-md-12">
+							<blockquote class="pull-right">
+								<p><i>
+									Hai orang-orang yang beriman, 
+									diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas 
+									orang-orang sebelum kalian agar kamu bertakwa.</i>
+								</p> <b> <i><small><cite>QS. Al Baqarah: 183</cite></small></b> </i>
+							</blockquote>
+						</div>
+					</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/countdown.js"></script>
+    <script type="application/javascript">
+
+
+
+    	$(document).ready(function(){
+    		countdownFitri();
+    		$("btnIdulFItri").click(function(){
+
+    		});
+    	});
+
+    function countdownFitri(day, month){
+    	var myCountdownTest = new Countdown({
+    								year    : 2015,
+									month	: 7, 
+									day		: 17,
+									width	: 400, 
+									height	: 100,
+									style 	: "flip",
+									target  : "timer_countdown",
+									rangeHi : "day",
+									rangeLo : "second",
+									});
+    }
+
+</script>
+
+  </body>
+</html>
